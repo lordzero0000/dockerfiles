@@ -1,0 +1,98 @@
+jenkins:
+    service:
+        image: guttertec/jenkins
+        name: jenkins
+        port: "8080"
+    images:
+        - ubuntu
+        - jdk6-oracle
+        - jenkins
+
+redis:
+    service:
+        image: guttertec/redis
+        name: redis
+        port: "6379"
+    images:
+        - ubuntu
+        - redis
+
+mongo:
+    service:
+        image: guttertec/mongodb
+        name: mongodb
+        port: "27017"
+    images:
+        - ubuntu
+        - mongodb
+
+rails:
+    service:
+        image: guttertec/rails-sample-app
+        name: rails-sample-app
+        port: "3000"
+    images:
+        - ubuntu
+        - ruby
+        - ruby-rails
+        - rails-sample-app
+
+ghost:
+    service:
+        image: guttertec/ghost
+        name: ghost
+        port: "2368"
+    images:
+        - ubuntu
+        - nodejs
+        - ghost
+
+#minecraft:
+    #service:
+      #image: 
+      #name: minecraft
+      #port: 
+    #images:
+      #- ubuntu
+      #- jdk6-oracle
+      #- minecraft-server
+
+#couchpotato
+    #service:
+      #image: 
+      #name: couchpotato
+      #port: 
+    #images:
+      #- lorem-ipsum
+
+#sabnzbd
+    #service:
+      #image: 
+      #name: sabnzbd
+      #port: 
+    #images:
+      #- lorem-ipsum
+
+#sickbeard
+    #service:
+      #image: 
+      #name: sickbeard
+      #port: 
+    #images:
+      #- lorem-ipsum
+
+#znc
+    #service:
+      #image: 
+      #name: znc
+      #port: 
+    #images:
+      #- lorem-ipsum
+
+#hubot-irc
+    #service:
+      #image: 
+      #name: hubot-irc
+      #port: 
+    #images:
+      #- lorem-ipsum
