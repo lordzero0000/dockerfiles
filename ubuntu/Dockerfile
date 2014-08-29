@@ -38,9 +38,9 @@ RUN \
 #   echo "RUN DONE"
 
 # Install oh-my-zsh and define zsh as default shell
+# change default shell
 RUN \
   wget --no-check-certificate http://install.ohmyz.sh -O - | /bin/zsh && \
-  # change default shell
   chsh -s /bin/zsh
 #ADD /root/.oh-my-zsh/themes/ano-docker.zsh-theme root/.oh-my-zsh/themes/ano-docker.zsh-theme
 #RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="ano-docker"/g' /root/.zshrc
