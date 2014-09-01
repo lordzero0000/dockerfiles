@@ -21,7 +21,7 @@ This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Do
 
 For example, you can run a `Oracle Java 8` container with the following command:
 
-  docker run -it --rm guttertec/java:oracle-java8 java -version
+`docker run -it --rm guttertec/java:oracle-java8 java -version`
 
 ## Installation
 
