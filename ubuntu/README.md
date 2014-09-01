@@ -1,12 +1,3 @@
----
-title: "Docker: Ubuntu Precise"
-slug: "docker-container-ubuntu-precise"
-date: 2014-09-01 08:57
-categories: [virtualization]
-tags: [docker, virtualization, ubuntu, linux, devops, container]
-published: true
----
-
 # Ubuntu Precise Pangolin
 
 This is my personal base image of Ubuntu Precise Pangolin.  
