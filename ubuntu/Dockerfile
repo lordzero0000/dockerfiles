@@ -8,8 +8,35 @@
 FROM ubuntu:14.04
 MAINTAINER Axel Quack <mail@axelquack.de>
 
+# Install.
+RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  apt-get install -y curl git htop man unzip vim wget zsh && \
+  rm -rf /var/lib/apt/lists/*
+
+# Add files.
+#ADD root/.bashrc /root/.bashrc
+#ADD root/.gitconfig /root/.gitconfig
+#ADD root/.scripts /root/.scripts
+
+# Set environment variables.
+#ENV HOME /root
+
+# Define working directory.
+#WORKDIR /root
+
+# Define default command.
+#CMD ["bash"]
+
+
+
+
 # perform an unattended installation, mostly silent
-ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND noninteractive
 
 # Optimization
 ## fasten DPKG by disabling dpkg from calling sync() and the like between every package
@@ -23,10 +50,6 @@ ENV DEBIAN_FRONTEND noninteractive
 #  echo $'#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d && \
 #  chmod +x /usr/sbin/policy-rc.d && \
 #  rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
-
-
-RUN apt-get -y update
-RUN apt-get install -y -q software-properties-common
 
 # Install packages
 #RUN \
