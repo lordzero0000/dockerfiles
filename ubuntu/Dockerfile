@@ -17,23 +17,27 @@ ENV DEBIAN_FRONTEND noninteractive
 ## prevent launch of servers during apt-get install, 101 - action forbidden by policy
 ## Disable ssh (use nsenter instead out of security reasons)
 
-RUN \
-  echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
-  echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
-  echo $'#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d && \
-  chmod +x /usr/sbin/policy-rc.d && \
-  rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+#RUN \
+#  echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
+#  echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
+#  echo $'#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d && \
+#  chmod +x /usr/sbin/policy-rc.d && \
+#  rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+
+
+RUN apt-get -y update
+RUN apt-get install -y -q software-properties-common
 
 # Install packages
-RUN \
-  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
-  apt-get update && \
-  apt-get -y upgrade && \
-  apt-get -y install build-essential curl git python g++ make && \
-  apt-get -y install software-properties-common && \
-  apt-get -y install python-software-properties && \
-  apt-get -y install curl git htop man tmux unzip vim wget make zsh && \
-  rm -rf /var/lib/apt/lists/*
+#RUN \
+#  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+#  apt-get update && \
+#  apt-get -y upgrade && \
+#  apt-get -y install build-essential curl git python g++ make && \
+#  apt-get -y install software-properties-common && \
+#  apt-get -y install python-software-properties && \
+#  apt-get -y install curl git htop man tmux unzip vim wget make zsh && \
+#  rm -rf /var/lib/apt/lists/*
 
 # Install oh-my-zsh and define zsh as default shell
 # change default shell on login
