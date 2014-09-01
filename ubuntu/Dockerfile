@@ -30,6 +30,7 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
+  apt-get install -y python-software-properties && \
   apt-get install -y curl git htop man tmux unzip vim wget make zsh && \
   rm -rf /var/lib/apt/lists/*
 
