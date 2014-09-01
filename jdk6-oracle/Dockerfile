@@ -8,7 +8,7 @@
 FROM guttertec/ubuntu
 MAINTAINER Axel Quack <mail@axelquack.de>
 
-RUN && \
+RUN \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get -qq update && \
   echo oracle-java6-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
