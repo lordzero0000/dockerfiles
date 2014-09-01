@@ -1,32 +1,23 @@
-# Ubuntu Precise Pangolin
+## Ubuntu Dockerfile
 
-This is my personal base image of Ubuntu Precise Pangolin.  
-The container is still in its early stage of development. I did some cleanups and accelerations in the beginning and installed some additional software to my needs.
 
-## Additional packages installed
+This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/ubuntu/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
-* curl
-* git
-* htop
-* man
-* tmux 
-* unzip
-* vim
-* wget
-* make
-* zsh
-* software-properties-common for <= 12.04
-* python-software-properties for >= 12.10
 
-## Additions from source installed
+### Base Docker Image
 
-* Oh My Zsh
+* [ubuntu:14.04](https://registry.hub.docker.com/u/library/ubuntu/)
 
-## To Do
 
-* set environment variables
-* define working directory
-* configure Oh My Zsh to my personal settings: .zshrc
-* configure tmux: tmux.conf
-* configure Vim: .vim, .vimrc.after, .vimrc.before. ,janus
-* configure wget: .wgetrc
+### Installation
+
+1. Install [Docker](https://www.docker.com/).
+
+2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/ubuntu/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/ubuntu`
+
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/ubuntu" github.com/dockerfile/ubuntu`)
+
+
+### Usage
+
+    docker run -it --rm dockerfile/ubuntu
