@@ -29,10 +29,10 @@ RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y build-essential curl git python g++ make && \
-  apt-get install -y software-properties-common && \
-  apt-get install -y python-software-properties && \
-  apt-get install -y curl git htop man tmux unzip vim wget make zsh && \
+  apt-get -y install build-essential curl git python g++ make && \
+  apt-get -y install software-properties-common && \
+  apt-get -y install python-software-properties && \
+  apt-get -y install curl git htop man tmux unzip vim wget make zsh && \
   rm -rf /var/lib/apt/lists/*
 
 # Install oh-my-zsh and define zsh as default shell
