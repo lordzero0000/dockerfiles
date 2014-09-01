@@ -8,7 +8,7 @@ This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Do
 
 ### Docker Tags
 
-`dockerfile/java` provides multiple tagged images:
+`guttertec/java` provides multiple tagged images:
 
 * `latest` (default): OpenJDK Java 7 JRE (alias to `openjdk-7-jre`)
 * `openjdk-6-jdk`: OpenJDK Java 6 JDK
@@ -21,7 +21,7 @@ This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Do
 
 For example, you can run a `Oracle Java 8` container with the following command:
 
-  docker run -it --rm dockerfile/java:oracle-java8 java -version
+`docker run -it --rm guttertec/java:oracle-java8 java -version`
 
 ## Installation
 
