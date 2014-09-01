@@ -11,7 +11,7 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/guttertec/ubuntu/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull guttertec/ubuntu` or (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/ubuntu" github.com/dockerfile/ubuntu`)
+2. Download [automated build](https://registry.hub.docker.com/u/guttertec/ubuntu/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull guttertec/ubuntu` or (alternatively, you can build an image from Dockerfile: `docker build -t="guttertec/ubuntu" github.com/guttertec/dockerfile/ubuntu`)
 
 ## Usage
 
