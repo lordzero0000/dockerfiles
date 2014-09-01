@@ -1,3 +1,8 @@
+############################################################
+# AUTHOR: Axel Quack <mail@axelquack.de>
+# Version 0.1
+############################################################
+
 # .zshrc is for interactive shell configuration. You set options for the interactive shell there with the setopt and unsetopt commands. You can also load shell modules, set your history options, change your prompt, set up zle and completion, et cetera. You also set any variables that are only used in the interactive shell (e.g. $LS_COLORS).
 
 
@@ -40,27 +45,15 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(docker git)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+
 
 # ###################################################################################################################################################
 # ALIAS
 # ###################################################################################################################################################
-
-alias 'ttop=top -ocpu -R -F -s 2 -n30'
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Git shortcuts
 alias ga='git add'
@@ -82,7 +75,6 @@ alias gf='git reflog'
 # Nerd stuff
 # Source: http://aur.archlinux.org/packages/lolbash/lolbash/lolbash.sh
 alias wtf='dmesg'
-alias onoz='cat /var/log/errors.log'
 alias rtfm='man'
 alias visible='echo'
 alias invisible='cat'
@@ -93,8 +85,5 @@ alias dowant='cp'
 alias gtfo='mv'
 alias hai='cd'
 alias plz='pwd'
-alias inur='locate'
 alias nomz='ps aux | less'
 alias nomnom='killall'
-alias cya='reboot'
-alias kthxbai='halt'
