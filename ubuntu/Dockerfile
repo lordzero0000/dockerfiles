@@ -5,7 +5,7 @@
 ############################################################
 
 # pull base image
-FROM ubuntu:precise
+FROM ubuntu::14.04
 MAINTAINER Axel Quack <mail@axelquack.de>
 
 # perform an unattended installation, mostly silent
