@@ -15,6 +15,7 @@ The container is still in its early stage of development. I did some cleanups an
 * wget
 * make
 * zsh
+* software-properties-common
 
 ## Additions from source installed
 
