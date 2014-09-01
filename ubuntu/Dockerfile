@@ -21,13 +21,16 @@ RUN \
 # Install oh-my-zsh and define zsh as default shell
 # change default shell
 RUN \
-  wget --no-check-certificate http://install.ohmyz.sh -O - | /bin/zsh && \
+  git clone git://github.com/robbyrussell/oh-my-zsh.git /root/.oh-my-zsh
   chsh -s /bin/zsh
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
+ADD root/.zshrc /root/.zshrc
+ADD root/.wgetrc /root/.wgetrc
+ADD root/.htoprc /root/.htoprc
 
 # Set environment variables.
 ENV HOME /root
