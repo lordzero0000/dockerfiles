@@ -22,6 +22,7 @@
 
 # Project specific #
 *.bak
+couchpotato
 ghost/
 hubot/
 hubot-irc/

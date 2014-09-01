@@ -25,9 +25,13 @@ RUN \
 
 # Install packages
 RUN \
-  apt-get -qq update && \
-  apt-get -qqy upgrade && \
-  apt-get install -qqy curl git htop man tmux unzip vim wget make zsh software-properties-common python-software-properties
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  apt-get install -y curl git htop man tmux unzip vim wget make zsh && \
+  rm -rf /var/lib/apt/lists/*
 
 # Install oh-my-zsh and define zsh as default shell
 # change default shell on login
