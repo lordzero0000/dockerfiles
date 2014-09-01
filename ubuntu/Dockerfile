@@ -27,7 +27,7 @@ RUN \
 RUN \
   apt-get -qq update && \
   apt-get -qqy upgrade && \
-  apt-get install -qqy curl git htop man tmux unzip vim wget make zsh software-properties-common
+  apt-get install -qqy curl git htop man tmux unzip vim wget make zsh software-properties-common python-software-properties
 
 # Install oh-my-zsh and define zsh as default shell
 # change default shell on login
