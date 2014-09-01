@@ -21,7 +21,7 @@ RUN \
 # Install oh-my-zsh and define zsh as default shell
 # change default shell
 RUN \
-  git clone git://github.com/robbyrussell/oh-my-zsh.git /root/.oh-my-zsh
+  git clone git://github.com/robbyrussell/oh-my-zsh.git /root/.oh-my-zsh && \
   chsh -s /bin/zsh
 
 # Add files.
