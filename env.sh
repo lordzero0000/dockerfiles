@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-# ##################################################################
+############################################################
+# Shell script to build container images
 # AUTHOR: Axel Quack <mail@axelquack.de>
-# ##################################################################
+# Version 0.1
+############################################################
 
 set -e
 
@@ -21,37 +23,37 @@ build(){
 }
 
 rebuild(){
-    echo "Rebuild docker images:"
-    for image in $images
-    do
-      docker build --no-cache --rm -t komljen/$image $home/$image/.
-    done
+  echo "Rebuild docker images:"
+  for image in $images
+  do
+    docker build --no-cache --rm -t komljen/$image $home/$image/.
+  done
 }
 
 stop(){
-    echo "Stopping docker containers:"
-    for container in $containers
-    do
-      docker stop $container || true
-    done
+  echo "Stopping docker containers:"
+  for container in $containers
+  do
+    docker stop $container || true
+  done
 }
 
 start(){
-    service_name=$(shyaml get-value $key.service.name < $conf)
-    service_image=$(shyaml get-value $key.service.image < $conf)
-    service_port=$(shyaml get-value $key.service.port < $conf)
-    service_port_cmd=$(if [ ! -z "$service_port" ]; then echo "-p ${service_port}:${service_port}"; fi)
+  service_name=$(shyaml get-value $key.service.name < $conf)
+  service_image=$(shyaml get-value $key.service.image < $conf)
+  service_port=$(shyaml get-value $key.service.port < $conf)
+  service_port_cmd=$(if [ ! -z "$service_port" ]; then echo "-p ${service_port}:${service_port}"; fi)
 
-    links_num=$(shyaml get-value $key.links < $conf | grep -c "name") || true
+  links_num=$(shyaml get-value $key.links < $conf | grep -c "name") || true
 
-    if [ "$links_num" -ne 0 ]
-    then
-      n=0
-       while [ "$n" -lt "$links_num" ]
-       do
-        link_name=$(shyaml get-value $key.links.$n < $conf | grep name | cut -d' ' -f2)
-        link_image=$(shyaml get-value $key.links.$n < $conf | grep image | cut -d' ' -f2)
-        link_alias=$(shyaml get-value $key.links.$n < $conf | grep alias | cut -d' ' -f2)
+  if [ "$links_num" -ne 0 ]
+  then
+    n=0
+    while [ "$n" -lt "$links_num" ]
+    do
+      link_name=$(shyaml get-value $key.links.$n < $conf | grep name | cut -d' ' -f2)
+      link_image=$(shyaml get-value $key.links.$n < $conf | grep image | cut -d' ' -f2)
+      link_alias=$(shyaml get-value $key.links.$n < $conf | grep alias | cut -d' ' -f2)
 
             echo "Starting ${link_name}:"
             docker run -d --name $link_name $link_image
@@ -65,14 +67,14 @@ start(){
 
             n=$(( n+1 ))
         done
-    fi
+  fi
 
     echo "Starting ${service_name}:"
     docker run -d --name $service_name                                         \
                   $service_port_cmd                                            \
                   $links_cmd $service_image
 
-    docker ps
+  docker ps
 }
 
 kill(){

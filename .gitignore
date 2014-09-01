@@ -21,3 +21,20 @@
 *.sqlite
 
 # Project specific #
+*.bak
+ghost/
+hubot/
+hubot-irc/
+hubot-scripts/
+jdk6-oracle/
+jenkins/
+minecraft/
+mongodb/
+nodejs/
+rails-sample-app/
+redis/
+ruby/
+ruby-rails/
+sabnzbd/
+sickbeard/
+znc/

@@ -8,6 +8,7 @@
 FROM ubuntu:precise
 MAINTAINER Axel Quack <mail@axelquack.de>
 
+# perform an unattended installation, mostly silent
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set correct environment variables

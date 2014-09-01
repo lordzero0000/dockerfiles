@@ -1,12 +1,3 @@
----
-title: "Docker: Couch Potato"
-slug: "docker-container-couch-potato"
-date: 2014-09-01 08:10
-categories: [virtualization]
-tags: [docker, virtualization, couch potato, devops, container, virtualization]
-published: true
----
-
 # CouchPotato
 
 CouchPotato, written in Python, searches NZB providers periodically for new movies. It will auto grab all the movie names, screenshots and anything else from TheTVDB.
