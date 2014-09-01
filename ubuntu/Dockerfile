@@ -30,7 +30,7 @@ RUN \
   apt-get install -qqy curl git htop man tmux unzip vim wget make zsh
 
 # Install oh-my-zsh and define zsh as default shell
-# change default shell
+# change default shell on login
 RUN \
   wget --no-check-certificate http://install.ohmyz.sh -O - | /bin/zsh && \
   chsh -s /bin/zsh
