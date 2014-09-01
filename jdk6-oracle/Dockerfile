@@ -9,6 +9,7 @@ FROM guttertec/ubuntu
 MAINTAINER Axel Quack <mail@axelquack.de>
 
 # Install Java (Oracle JDK6)
+# if you want to add apt repositories make sure you have "software-properties-common" installed
 RUN \
   echo oracle-java6-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
