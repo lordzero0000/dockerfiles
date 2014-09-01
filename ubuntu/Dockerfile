@@ -12,15 +12,16 @@ MAINTAINER Axel Quack <mail@axelquack.de>
 ENV DEBIAN_FRONTEND noninteractive
 
 # Optimization
+## fasten DPKG by disabling dpkg from calling sync() and the like between every package
+## add an No-Cache header to APT http requests
+## prevent launch of servers during apt-get install, 101 - action forbidden by policy
+## Disable ssh (use nsenter instead out of security reasons)
+
 RUN \
-  # fasten DPKG by disabling dpkg from calling sync() and the like between every package
   echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
-  # add an No-Cache header to APT http requests
   echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
-  # prevent launch of servers during apt-get install, 101 - action forbidden by policy
   echo $'#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d && \
   chmod +x /usr/sbin/policy-rc.d && \
-  # Disable ssh (use nsenter instead out of security reasons)
   rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Install packages
