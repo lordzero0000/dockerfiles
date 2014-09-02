@@ -28,7 +28,6 @@ hubot/
 hubot-irc/
 hubot-scripts/
 jenkins/
-mongodb/
 nodejs/
 rails-sample-app/
 redis/
