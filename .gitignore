@@ -22,7 +22,6 @@
 
 # Project specific #
 *.bak
-couchpotato
 hubot/
 hubot-irc/
 hubot-scripts/
