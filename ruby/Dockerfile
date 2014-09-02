@@ -1,5 +1,5 @@
 ############################################################
-# Dockerfile file to build Redis container images
+# Dockerfile file to build Ruby container images
 # AUTHOR: Axel Quack <mail@axelquack.de>
 # Version 0.1
 ############################################################
