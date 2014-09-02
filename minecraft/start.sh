@@ -1,5 +1,11 @@
 #!/bin/sh
 
+############################################################
+# Shell script to fetch Minecraft versions
+# AUTHOR: Axel Quack <mail@axelquack.de>
+# Version 0.1
+############################################################
+
 case $VERSION in
   LATEST)
     export VERSION=`wget -O - https://s3.amazonaws.com/Minecraft.Download/versions/versions.json | jsawk -n 'out(this.latest.release)'`
