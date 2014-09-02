@@ -1,6 +1,5 @@
 # Minecraft
 
-
 This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/guttertec/minecraft/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 ## Base Docker Image
