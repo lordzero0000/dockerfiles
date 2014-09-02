@@ -22,12 +22,9 @@
 
 # Project specific #
 *.bak
-hubot/
 hubot-irc/
 hubot-scripts/
 jenkins/
-rails-sample-app/
-ruby-rails/
 sabnzbd/
 sickbeard/
 znc/
