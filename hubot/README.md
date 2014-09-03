@@ -8,6 +8,7 @@ This repository contains **Dockerfile** of [Hubot](https://hubot.github.com) for
 
 ### Dependencies
 
+* [guttertec/python](https://registry.hub.docker.com/u/guttertec/python/)
 * [guttertec/ubuntu](https://registry.hub.docker.com/u/guttertec/ubuntu/)
 
 ## Installation
