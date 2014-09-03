@@ -10,10 +10,8 @@ MAINTAINER Axel Quack <mail@axelquack.de>
 
 # Add scripts
 ADD \
-  scripts/examples.coffee /root/mybot/scripts/advice.coffee && \
-  scripts/examples_cron.coffee /root/mybot/scripts/examples_cron.coffee && \
-  scripts/examples_rss.coffee /root/mybot/scripts/examples_rss.coffee && \
-  scripts/examples_http_listener.coffee /root/mybot/scripts/examples_http_listener.coffee
+  scripts/advice.coffee /root/mybot/scripts/advice.coffee && \
+  scripts/bitcoin.coffee /root/mybot/scripts/bitcoin.coffee
 
 # Install npm libraries
 WORKDIR /root/mybot
