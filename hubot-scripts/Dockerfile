@@ -14,4 +14,4 @@ ADD scripts/bitcoin.coffee /root/mybot/scripts/bitcoin.coffee
 
 # Install npm libraries
 WORKDIR /root/mybot
-RUN npm install cron
+RUN npm install cron cheerio
