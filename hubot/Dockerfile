@@ -11,7 +11,9 @@ MAINTAINER Axel Quack <mail@axelquack.de>
 # Install CoffeeScript, Hubot
 RUN \
   npm install -g coffee-script hubot && \
-  apt-get install -y redis-server
+  apt-get update && \
+  apt-get install -y redis-server && \
+  rm -rf /var/lib/apt/lists/*
 
 # Create Hubot
 WORKDIR /root
