@@ -9,10 +9,9 @@ FROM guttertec/hubot
 MAINTAINER Axel Quack <mail@axelquack.de>
 
 # Add scripts
-ADD \
-  scripts/advice.coffee /root/mybot/scripts/advice.coffee && \
-  scripts/bitcoin.coffee /root/mybot/scripts/bitcoin.coffee
+ADD scripts/advice.coffee /root/mybot/scripts/advice.coffee
+ADD scripts/bitcoin.coffee /root/mybot/scripts/bitcoin.coffee
 
 # Install npm libraries
 WORKDIR /root/mybot
-RUN npm install cron parse-rss cheerio
+RUN npm install cron
