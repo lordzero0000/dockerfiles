@@ -11,6 +11,7 @@ MAINTAINER Axel Quack <mail@axelquack.de>
 # Add scripts
 ADD scripts/advice.coffee /root/mybot/scripts/advice.coffee
 ADD scripts/bitcoin.coffee /root/mybot/scripts/bitcoin.coffee
+ADD hubot-scripts.json hubot-scripts.json
 
 # Install npm libraries
 WORKDIR /root/mybot

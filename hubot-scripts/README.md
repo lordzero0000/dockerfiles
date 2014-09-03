@@ -19,10 +19,4 @@ This repository contains **Dockerfile** of [Hubot Scripts](https://github.com/gi
 
 ## Usage
 
-### Pull
-
-`$ docker pull guttertec/hubot-scripts`
-
-### Build
-
-`$ docker build -t guttertec/hubot-scripts .`
+`docker run -it --rm guttertec/hubot-scripts`
