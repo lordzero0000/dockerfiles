@@ -23,7 +23,6 @@
 # Project specific #
 *.bak
 hubot-irc/
-hubot-scripts/
 jenkins/
 sabnzbd/
 sickbeard/
