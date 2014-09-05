@@ -22,8 +22,11 @@
 
 # Project specific #
 *.bak
+couchpotato/
 hubot-irc/
 jenkins/
 sabnzbd/
 sickbeard/
 znc/
+env.sh
+config.yaml
