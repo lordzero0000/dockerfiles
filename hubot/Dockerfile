@@ -15,6 +15,9 @@ RUN \
   apt-get install -y redis-server && \
   rm -rf /var/lib/apt/lists/*
 
+# Define default command.
+CMD ["redis-server"]
+
 # Create Hubot
 WORKDIR /root
 RUN hubot --create mybot
