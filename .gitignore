@@ -22,12 +22,9 @@
 
 # Project specific #
 *.bak
-coreos-kubernetes/
 couchpotato/
 hubot-irc/
 jenkins/
 sabnzbd/
 sickbeard/
 znc/
-env.sh
-config.yaml
