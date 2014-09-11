@@ -23,7 +23,6 @@
 # Project specific #
 *.bak
 couchpotato/
-hubot-irc/
 jenkins/
 sabnzbd/
 sickbeard/
