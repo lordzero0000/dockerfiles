@@ -21,7 +21,7 @@ This repository contains **Dockerfile** of [Hubot](https://hubot.github.com) wit
 
 `docker pull guttertec/hubot-irc`
 
-#### Build
+### Build
 
 If you would like to build on local, you should run the following `docker build` command.
 
@@ -33,9 +33,9 @@ If you would like to build on local, you should run the following `docker build`
 
 `docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=#<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -td guttertec/hubot-irc`
 
-**with `--name` option**  
+**with name option (requires environment value `HUBOT_IRC_NICK`**  
 
-`docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=#<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -td guttertec/hubot-irc --name <YOUR_NAME>`
+`docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=#<YOUR_HUBOT_IRC_ROOM> -e HUBOT_IRC_NICK=<YOUR_IRC_NICK> -p 9980:9980 -td guttertec/hubot-irc
 
 ### HTTP Listener
 
