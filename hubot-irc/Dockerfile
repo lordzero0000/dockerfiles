@@ -5,7 +5,7 @@
 ############################################################
 
 # Pull base image.
-FROM guttertec/hubot
+FROM guttertec/hubot-scripts
 MAINTAINER Axel Quack <mail@axelquack.de>
 
 # Install hubot-irc
@@ -24,8 +24,6 @@ ENV \
 ENV PORT 9980
 EXPOSE 9980
 
-# Run redis-server and Hubot("-a irc")
-EXPOSE 6379
-RUN /etc/init.d/redis-server start
+# Run Hubot("-a irc")
 ENTRYPOINT ["bin/hubot", "-a", "irc"]
 CMD ["--name", "myhubot"]

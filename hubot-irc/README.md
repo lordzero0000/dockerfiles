@@ -1,6 +1,6 @@
 # Hubot
 
-This repository contains **Dockerfile** of [Hubot](https://hubot.github.com) with [Hubot IRC adapter]() for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/guttertec/hubot/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains **Dockerfile** of [Hubot](https://hubot.github.com) with [Hubot IRC adapter](https://github.com/nandub/hubot-irc) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/guttertec/hubot/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 ## Base Docker Image
 
@@ -13,7 +13,7 @@ This repository contains **Dockerfile** of [Hubot](https://hubot.github.com) wit
 * [guttertec/python](https://registry.hub.docker.com/u/guttertec/python/)
 * [guttertec/ubuntu](https://registry.hub.docker.com/u/guttertec/ubuntu/)
 
-# Dockerfile for hubot-irc
+# Dockerfile for Hubot IRC adapter
 
 ## Usage
 
@@ -29,13 +29,13 @@ If you would like to build on local, you should run the following `docker build`
 
 ### Run
 
-* join IRC (requires two environment values `HUBOT_IRC_SERVER` and `HUBOT_IRC_ROOMS`)
+**join IRC (requires two environment values `HUBOT_IRC_SERVER` and `HUBOT_IRC_ROOMS`)**  
 
-`docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -td guttertec/hubot-irc`
+`docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=#<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -td guttertec/hubot-irc`
 
-* with `--name` option
+**with `--name` option**  
 
-`docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -td guttertec/hubot-irc --name <YOUR_NAME>`
+`docker run -e HUBOT_IRC_SERVER=<YOUR_HUBOT_IRC_SERVER> -e HUBOT_IRC_ROOMS=#<YOUR_HUBOT_IRC_ROOM> -p 9980:9980 -td guttertec/hubot-irc --name <YOUR_NAME>`
 
 ### HTTP Listener
 
