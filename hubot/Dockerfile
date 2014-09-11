@@ -18,7 +18,6 @@ RUN \
 # Define default command.
 EXPOSE 6379
 RUN /etc/init.d/redis-server start
-# CMD ["redis-server"]
 
 # Create Hubot
 WORKDIR /root
