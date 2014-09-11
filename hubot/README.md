@@ -20,9 +20,9 @@ This repository contains **Dockerfile** of [Hubot](https://hubot.github.com) for
 
 ### Pull
 
-`$ docker pull guttertec/hubot`
+`docker pull guttertec/hubot`
 
 ### Build
 
 If you would like to build on local, you should run the following `docker build` command.  
-`$ docker build -t guttertec/hubot .`
+`docker build -t guttertec/hubot .`

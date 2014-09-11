@@ -16,7 +16,9 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 # Define default command.
-CMD ["redis-server"]
+EXPOSE 6379
+RUN /etc/init.d/redis-server start
+# CMD ["redis-server"]
 
 # Create Hubot
 WORKDIR /root
