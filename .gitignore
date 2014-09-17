@@ -24,6 +24,8 @@
 *.bak
 couchpotato/
 jenkins/
+nginx/
 sabnzbd/
 sickbeard/
+tomcat/
 znc/
