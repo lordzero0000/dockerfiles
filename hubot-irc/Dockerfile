@@ -14,7 +14,7 @@ RUN \
   npm install hubot-irc --save && \
   npm install
 
-# Set Hubot irc environment
+# Set Hubot IRC environment
 # HUBOT_IRC_SERVER and HUBOT_IRC_ROOMS must be indicated by `docker run -e ...`
 ENV \
   HUBOT_IRC_NICK hubot && \
