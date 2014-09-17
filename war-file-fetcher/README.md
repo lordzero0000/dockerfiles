@@ -12,6 +12,8 @@ This repository contains **Dockerfile** of a WAR file fetcher for [Docker](https
 
 `docker pull guttertec/war-file-fetcher`
 
+
 ### Fetch a WAR file
 
-`docker run -it --name sample guttertec/war-file-fetcher https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war`
+If you use my Ubuntu image zsh is already installed and configured  
+`docker run -it --name sample guttertec/war-file-fetcher https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war /bin/zsh`

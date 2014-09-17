@@ -15,8 +15,11 @@ RUN \
   apt-get -yqq update && \
   apt-get -yqq install wget
 
-VOLUME [ "/var/lib/tomcat7/webapps" ]
-WORKDIR /var/lib/tomcat7/webapps/
+# Create a volume
+VOLUME [ "/root/tomcat7/webapps" ]
+
+# Define working directory.
+WORKDIR /root/tomcat7/webapps/
 
 # Wget a WAR file from an URL when you run the container
 ENTRYPOINT [ "wget" ]
