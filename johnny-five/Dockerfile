@@ -20,7 +20,7 @@ RUN \
 ADD package.json /tmp/package.json
 RUN \
   cd /tmp && npm install && \
-  mdkir -p /opt/app && cp -a /tmp/node_modules /opt/app
+  mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app
 
 # Load the application's code in, therefore the previous docker
 # "layer" that has been cached will be used if possible.
@@ -29,5 +29,5 @@ ADD . /opt/app
 
 EXPOSE 3000
 
-# Define default command. Make sure you have got zsh already installed.
+# Define default command.
 CMD ["node", "server.js"]
