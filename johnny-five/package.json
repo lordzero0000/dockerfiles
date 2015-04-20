@@ -1,0 +1,11 @@
+{
+  "name": "johnnyFiveWrapper",
+  "description": "Just a blank wrapper for Johnny Five",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "johnny-five": "*"
+  }
+}

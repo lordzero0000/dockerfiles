@@ -23,6 +23,8 @@
 # Project specific #
 *.bak
 couchpotato/
+cylonjs/
+cylonjs-platforms/
 jenkins/
 nginx/
 sabnzbd/
