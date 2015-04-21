@@ -2,10 +2,23 @@
   "name": "johnnyFiveWrapper",
   "description": "Just a blank wrapper for Johnny Five",
   "version": "0.0.1",
+  "keywords": [
+    "johnny five",
+    "robotics",
+    "arduino",
+    "robots",
+    "bots"
+  ],
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
     "johnny-five": "*"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Axel Quack",
+      "email": "mail@axelquack.de"
+    }
+  ]
 }
