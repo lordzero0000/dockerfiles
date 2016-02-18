@@ -27,7 +27,7 @@ If you would like to build on local, you should run the following `docker build`
 
 **join Slack (requires one environment values `HUBOT_SLACK_TOKEN`)**  
 
-`docker run -e HUBOT_NAME=<YOUR_HUBOT_NAME> -e HUBOT_SLACK_TOKEN=#<YOUR_SLACK_TOKEN> -p 9980:9980 -td hubot-slack`
+`docker run -e HUBOT_NAME=<YOUR_HUBOT_NAME> -e HUBOT_SLACK_TOKEN=<YOUR_SLACK_TOKEN> -p 9980:9980 -td hubot-slack`
 
 ### HTTP Listener
 
