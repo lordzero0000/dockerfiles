@@ -18,4 +18,4 @@ ENV PORT 9980
 EXPOSE 9980
 
 # Run Hubot("-a adapter --name hubot_name")
-RUN bin/hubot -a slack --name $HUBOT_NAME
+CMD bin/hubot -a slack --name $HUBOT_NAME
